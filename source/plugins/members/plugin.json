@@ -1,0 +1,9 @@
+{
+	"name":"members",
+	"title": "Member Management",
+	"version": "0.1",
+	"author": "ZwenAusZwota",
+	"author_url": "httsp://zwen-aus-zwota.de",
+	"plugin_url": "https://zwen-aus-zwota.de/csn/members",
+	"description": "Mitgliederverwaltung"
+}

@@ -1,0 +1,20 @@
+{
+    "SYS_LOGIN": "Login",
+    "SYS_MY_PROFILE": "Mein Profil",
+    "SYS_LOGOUT": "Logout",
+    "SYS_NO_RIGHTS": "Du hast leider keine Berechtigung, um diese Seite zu sehen...",
+    "SYS_MESSAGE": "Nachricht",
+    "SYS_HOME": "Start",
+    "SYS_SETTINGS": "Einstellungen",
+    "SYS_THEMES": "Themes",
+    "SYS_PLUGINS": "Plugins",
+    "PREF_NAME": "Name",
+    "PREF_TITLE": "Title",
+    "PREF_VERSION": "Version",
+    "PREF_AUTHOR": "Autor",
+    "PREF_STATUS": "Status",
+    "SYS_ACTIVE": "aktiv",
+    "SYS_INACTIVE": "inaktiv",
+    "MEMBERS": "",
+    "birthday": ""
+}

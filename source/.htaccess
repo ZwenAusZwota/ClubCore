@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Rewrite rules
+RewriteRule ^([a-z]+)$ index.php?page=$1 [L]
+RewriteRule ^([a-z]+)/([0-9]+)$ index.php?page=$1&id=$2 [L]
+RewriteRule ^([a-z]+)/([a-z]+)$ index.php?page=$1&sub=$2 [L]
+RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)$ index.php?page=$1&sub=$2&id=$3 [L]
+#RewriteRule ^([a-z]+)/add$ index.php?page=$1&action=add [L]
+#RewriteRule ^([a-z]+)/([0-9]+)/edit$ index.php?page=$1&action=edit=$2 [L]

@@ -1,0 +1,54 @@
+/* --- Modal Grundlayout --- */
+/* --- Modal zentriert im Viewport ------------------------------ */
+.modal {
+  /* bereits vorhanden: display:none; position:fixed; inset:0 … */
+  display: none;                        /* bleibt verborgen, bis JS es öffnet */
+  position: fixed;
+  inset: 0;                             /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,.5);           /* Abdunkelung */
+  z-index: 1000;
+
+  /* ► Flexbox sorgt für horizontale & vertikale Zentrierung  */
+  justify-content: center;
+  align-items:   center;
+}
+
+/* ---------- Modal-Fenster ---------- */
+.modal-content {
+  background: #fff;
+  max-width: 400px;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.2);
+
+  /* ► wichtig für absolut positionierten Schließen-Button */
+  position: relative;
+}
+
+/* ---------- Schließen-Button (X) ---------- */
+.close-modal {
+  position: absolute;
+  top: 0.5rem;          /* Abstand zur oberen Kante */
+  right: 0.5rem;        /* Abstand zur rechten Kante */
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  width:50px!important;
+}
+
+
+/* Formular-Elemente */
+.modal-content h2       { color:#b30000; text-align:center; margin-top:0; }
+.modal-content label     { display:block; margin-top:1rem; font-weight:bold; }
+.modal-content input     { width:100%; padding:.5rem; margin-top:.3rem; border:1px solid #ccc; border-radius:4px; }
+.modal-content button    { width:100%; margin-top:1.5rem; padding:.7rem; background:#b30000; color:#fff; border:none; border-radius:4px; font-weight:bold; cursor:pointer; }
+.modal-content button:hover { background:#990000; }
+
+.stay-signed { display:flex; align-items:center; gap:.4rem; margin-top:1rem; }
+.modal-links { text-align:center; margin-top:1rem; }
+.modal-links a { color:#b30000; text-decoration:none; }
+.modal-links a:hover { text-decoration:underline; }
+
+/* --- Seite bei offenem Modal fixieren --- */
+body.modal-open { overflow:hidden; }

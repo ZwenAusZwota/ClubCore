@@ -1,0 +1,213 @@
+/* ---------------------------------------------------------  
+   PROFILSEITE – Förderverein FFW Ottendorf  
+   Datei: profile.css  
+   --------------------------------------------------------- */
+
+:root{
+    --fvo-red:        #b30000;
+    --fvo-red-dark:   #910000;
+    --fvo-gray-light: #f5f5f5;
+    --fvo-gray-border:#d0d0d0;
+    --fvo-radius:     .5rem;
+    --fvo-font:       'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    --fvo-shadow:     0 4px 12px rgba(0,0,0,.06);
+}
+
+/* ---------- 1 | Grundlayout ---------------------------------- */
+
+body{
+    font-family:var(--fvo-font);
+    color:#333;
+    background:#fafafa;
+    margin:0;
+    line-height:1.4;
+}
+
+/* in den Modulen vorhandener Wrapper */
+.content-header{
+    margin-bottom:1.8rem;
+}
+
+/* ---------- 2 | Seitenkopf & Funktionsmenü ------------------- */
+
+.module-headline{
+    font-size:1.8rem;
+    font-weight:700;
+    margin:0 0 1rem;
+    color:var(--fvo-red-dark);
+}
+
+.menu-function-node{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.menu-function-node .btn{
+    background:var(--fvo-red);
+    color:#fff;
+    border:none;
+    border-radius:var(--fvo-radius);
+    padding:.55rem 1.1rem;
+    font-weight:600;
+    transition:background .15s, transform .1s;
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+}
+.menu-function-node .btn:hover{
+    background:var(--fvo-red-dark);
+}
+.menu-function-node .btn:active{
+    transform:scale(.97);
+}
+
+/* ---------- 3 | Card-Grunddesign ------------------------------ */
+
+.card{
+    background:#fff;
+    border:1px solid var(--fvo-gray-border);
+    border-radius:var(--fvo-radius);
+    margin-bottom:1.4rem;
+    box-shadow:var(--fvo-shadow);
+}
+
+.card-header{
+    background:var(--fvo-gray-light);
+    padding:.85rem 1.1rem;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.6rem;
+}
+
+.card-body{
+    padding:1.4rem 1.1rem 1.2rem;
+}
+
+/* ---------- 4 | Formular- / Feld­gruppen­darstellung --------- */
+
+.field-group .form-group{
+    margin-bottom:1rem;
+}
+.field-group .control-label{
+    font-weight:600;
+    margin-bottom:.2rem;
+    color:#444;
+}
+.field-group .form-control-static{
+    background:transparent;      /* transparent, da Static-Text */
+    padding:0;
+    margin:0;
+}
+
+/* Zweispaltiges Label-/Text-Layout (Desktop) */
+@media(min-width:576px){
+    .field-group .row{
+        display:flex;
+        align-items:flex-start;
+    }
+    .field-group .col-sm-3{       /* Label-Spalte */
+        max-width:28%;
+        flex:0 0 28%;
+        padding-right:.6rem;
+        text-align:right;
+    }
+    .field-group .col-sm-9{       /* Wert-Spalte */
+        max-width:72%;
+        flex:0 0 72%;
+    }
+}
+
+/* Einschub für Icons innerhalb Static-Text */
+.form-control-static i{
+    margin-left:.25rem;
+    color:var(--fvo-red);
+}
+
+/* ---------- 6 | Rechte-/Rollenlisten -------------------------- */
+
+.profile-user-right,
+#profile_user_right{ /* fallback selector */
+    background:var(--fvo-gray-light);
+    border:1px solid var(--fvo-gray-border);
+    border-radius:var(--fvo-radius);
+    padding:.55rem .75rem;
+    margin-bottom:.65rem;
+    font-size:.9rem;
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+}
+.profile-user-right i{
+    color:var(--fvo-red-dark);
+}
+
+/* Listen für Rollen & Beziehungen */
+.list-roles-assign .list-group-item{
+    border:none;
+    border-bottom:1px solid var(--fvo-gray-border);
+    padding:.7rem 0;
+    font-size:.95rem;
+}
+.list-roles-assign .list-group-item:last-child{
+    border-bottom:none;
+}
+.list-roles-assign .list-group-item a{
+    color:var(--fvo-red);
+}
+.list-roles-assign .list-group-item a:hover{
+    text-decoration:underline;
+}
+
+/* ---------- 7 | Tabellenlose Info-Boxen ----------------------- */
+
+.info-created-edited{
+    margin-top:2rem;
+    font-size:.85rem;
+    color:#555;
+}
+.info-created-edited a{
+    color:var(--fvo-red);
+}
+
+/* ---------- 9 | Tooltip- / Popover-Icon Gestaltung ------------ */
+
+.info-icon,
+.icon-link i{
+    color:var(--fvo-red-dark);
+    cursor:pointer;
+}
+.icon-link:hover i{
+    color:var(--fvo-red);
+}
+
+/* ---------- 10 | Responsive Anpassungen ---------------------- */
+
+/* Stapeln von Label/Wert unter 576 px */
+@media(max-width:575.98px){
+    .field-group .control-label{
+        text-align:left;
+        margin-bottom:.2rem;
+    }
+    .field-group .col-sm-3,
+    .field-group .col-sm-9{
+        max-width:100%;
+        flex:0 0 100%;
+    }
+    #div_profile_photo{
+        margin-top:1rem;
+    }
+}
+
+/* Knopfgrößen auf sehr kleinen Bildschirmen */
+@media(max-width:400px){
+    .menu-function-node .btn{
+        font-size:.85rem;
+        padding:.45rem .8rem;
+    }
+}

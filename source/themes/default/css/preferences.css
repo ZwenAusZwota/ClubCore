@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------
+   Einstellungen   |   Datei: preferences.css
+   --------------------------------------------------------- */
+
+:root{
+    --fvo-red:#b30000; --fvo-red-dark:#910000;
+    --fvo-gray-light:#f5f5f5; --fvo-gray-border:#d0d0d0;
+    --fvo-radius:.5rem; --fvo-font:'Segoe UI',Roboto,'Open Sans',sans-serif;
+}
+

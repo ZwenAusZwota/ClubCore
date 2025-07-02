@@ -1,0 +1,140 @@
+/* ---------------------------------------------------------  
+   TABELLE MIT SORTIERBAREN SPALTEN  
+   Datei: table-sort.css  
+   --------------------------------------------------------- */
+
+:root{
+    --fvo-red:#b30000;
+    --fvo-red-dark:#910000;
+    --fvo-gray-light:#f7f7f7;
+    --fvo-gray-border:#d0d0d0;
+    --fvo-radius:.45rem;
+    --fvo-font:'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    --fvo-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+/* ---------- Grundcontainer ------------------------------------ */
+
+.table-wrapper{
+    background:#fff;
+    border:1px solid var(--fvo-gray-border);
+    border-radius:var(--fvo-radius);
+    box-shadow:var(--fvo-shadow);
+    overflow:auto;
+}
+
+/* ---------- Tabelle ------------------------------------------- */
+
+.sort-table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:var(--fvo-font);
+    font-size:.93rem;
+}
+
+.sort-table thead{
+    background:var(--fvo-gray-light);
+}
+
+.sort-table th,
+.sort-table td{
+    padding:.7rem 1rem;
+    border-bottom:1px solid var(--fvo-gray-border);
+    text-align:left;
+    white-space:nowrap;
+}
+
+/* Zebra-Look für bessere Lesbarkeit */
+.sort-table tbody tr:nth-child(even){
+    background:#fafafa;
+}
+
+/* ---------- Sortier-Header ------------------------------------ */
+
+.sortable{
+    cursor:pointer;
+    position:relative;
+    user-select:none;
+    font-weight:600;
+    color:#333;
+}
+
+/* Pfeile via Pseudo-Element */
+.sortable::after{
+    content:"";
+    position:absolute;
+    left:.4rem;
+    top:50%;
+    width:.4rem;
+    height:.45rem;
+    margin-top:-.25rem;
+    background:url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='%23b30000'>\
+        <path d='M0 3l5 5 5-5z'/>\
+        </svg>") no-repeat center/contain;
+    opacity:.55;
+    transition:transform .15s, opacity .15s;
+}
+
+/* Aufsteigend  */
+.sortable.asc::after{
+    transform:rotate(180deg);
+    opacity:1;
+}
+/* Absteigend */
+.sortable.desc::after{
+    opacity:1;
+}
+
+/* Hover-Farbe */
+.sortable:hover{
+    color:var(--fvo-red-dark);
+}
+
+/* ---------- Ladeindikator ------------------------------------- */
+
+.table-loading{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+    color:var(--fvo-red);
+    font-weight:600;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+
+.spinner{
+    width:1.2rem;
+    height:1.2rem;
+    border:.2rem solid var(--fvo-gray-border);
+    border-top-color:var(--fvo-red);
+    border-radius:50%;
+    margin-right:.6rem;
+    animation:spin .8s linear infinite;
+}
+
+/* ---------- Responsive Break _< 576 px ------------------------ */
+
+@media(max-width:575.98px){
+    .sort-table th,
+    .sort-table td{
+        padding:.6rem .6rem;
+        font-size:.85rem;
+    }
+}
+
+/* -------- allgemeine Tabelle --------------*/
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+td{
+	padding:5px;
+}
