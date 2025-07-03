@@ -1,5 +1,6 @@
 🧩 ClubCore – Modular Club Management System
-CluCore is a lightweight and extensible management platform for clubs and associations. It combines a simple, responsive frontend with a powerful, modular backend – inspired by the WordPress architecture with support for themes and plugins.
+
+ClubCore is a lightweight and extensible management platform for clubs and associations. It combines a simple, responsive frontend with a powerful, modular backend – inspired by the WordPress architecture with support for themes and plugins.
 
 ✨ Features
 Quick access to core functions (members, tasks, calendar, and more)
